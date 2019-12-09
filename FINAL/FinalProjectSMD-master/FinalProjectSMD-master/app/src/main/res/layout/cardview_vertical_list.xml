@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vertiCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:elevation="7dp"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewVerlist"
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        android:layout_margin="9dp"
+        android:background="@drawable/button_round"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="0"
+        app:cardBackgroundColor="@color/whiteColor"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="false">
+
+        <FrameLayout
+            android:id="@+id/frameverti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_round">
+
+            <ImageView
+                android:id="@+id/verBack"
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                android:background="@drawable/button_round"
+                android:scaleType="fitXY"
+                android:src="@drawable/kfc" />
+
+
+            <TextView
+
+                android:id="@+id/vertiText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom"
+                android:background="@color/whiteColor" />
+
+            <ImageView
+                android:id="@+id/verLogo"
+                android:layout_width="59dp"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/kfclogo" />
+
+            <TextView
+                android:id="@+id/head1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginStart="70dp"
+                android:layout_marginBottom="25dp"
+                android:text="Heading"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/head2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="70dp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="5dp"
+                android:text="Content"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/addToFav"
+                style="@android:style/Widget.DeviceDefault.ImageButton"
+                android:layout_width="37dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="9dp"
+                android:layout_gravity="right|bottom"
+                android:background="@color/whiteColor"
+                android:onClick="addToFavourite"
+                android:scaleType="fitXY"
+                android:src="@drawable/star" />
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

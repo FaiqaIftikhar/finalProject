@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/users"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_favourites"
+            android:icon="@drawable/heart"
+            android:title="Favourites" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/notibtn"
+            android:title="Subscriptions" />
+        <item
+            android:id="@+id/nav_add"
+            android:icon="@drawable/plus"
+            android:title="Post Own Add" />
+        <item
+            android:id="@+id/nav_brand"
+            android:icon="@drawable/plus"
+            android:title="Register Brand" />
+
+
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+    <item android:title="Retrofit">
+        <menu>
+            <item
+                android:id="@+id/retrofit"
+                android:icon="@drawable/ret"
+                android:title="Retrofit"
+                />
+        </menu>
+    </item>
+
+</menu>

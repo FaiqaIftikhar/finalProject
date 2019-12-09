@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".poster">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbCategory"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blackColor"
+            android:elevation="0dp"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Add your Brand!"
+            android:textColor="@color/whiteColor"
+            android:textSize="29dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            android:background="@color/blackColor"
+            android:onClick="backAcivity"
+            android:src="@drawable/backarrow" />
+
+    </FrameLayout>
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linear1">
+
+
+        <ImageView
+            android:id="@+id/brandPoster"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/brandName"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Brand Name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brandPoster"
+            app:layout_constraintVertical_bias="0.058" />
+
+        <EditText
+            android:id="@+id/brandCategory"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Brand Category"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brandName" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Add Description"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brandCategory" />
+
+        <EditText
+            android:id="@+id/timings"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Add Outlet Timings"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="ie: 03344393029"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timings" />
+
+        <Button
+            android:id="@+id/uploadBrandPic"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/sign_btn"
+
+            android:fontFamily="@font/nunito_bold"
+
+            android:text="Upload Brand Picture"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact" />
+
+        <Button
+            android:id="@+id/uploadBrandLoc"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/sign_btn"
+
+            android:fontFamily="@font/nunito_bold"
+
+            android:text="Upload Brand Location"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uploadBrandPic" />
+
+        <Button
+            android:id="@+id/submitBrand"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:background="@drawable/sign_btn"
+            android:fontFamily="@font/nunito_bold"
+            android:text="SUBMIT"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uploadBrandLoc"
+            app:layout_constraintVertical_bias="0.352" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".info">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/titleProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Deja Vu Men's Collection"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.008"
+                app:layout_constraintStart_toEndOf="@+id/imageBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="311dp"
+                android:layout_height="170dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/menclothes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/shopBag"
+                android:layout_width="57dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="336dp"
+                android:layout_marginTop="52dp"
+                android:src="@drawable/shopping_bag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="177dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="400dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="@color/averageColor"
+                android:rating="5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:secondaryProgressTint="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleProduct" />
+
+            <ImageButton
+                android:id="@+id/sub"
+                android:layout_width="141dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:drawable/screen_background_light_transparent"
+                android:onClick="onSubscribe"
+                android:scaleType="fitCenter"
+                android:src="@drawable/subscribe1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/infoProductType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="428dp"
+                android:text="Apparel &amp; Footwear"
+                android:fontFamily="@font/nunito_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rating" />
+
+            <TextView
+                android:id="@+id/percentageOff"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="336dp"
+                android:layout_marginTop="16dp"
+                android:text="10% off on entire bill"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/skyBlueColor"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shopBag" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:onClick="backAcivity"
+            android:src="@drawable/backarrow" />
+    </FrameLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CDCDCD"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="5dp"
+        app:tabGravity="center"
+        app:tabMode="scrollable"
+        app:tabPaddingBottom="-1dp"
+        app:tabPaddingEnd="-1dp"
+        app:tabPaddingStart="-1dp"
+        app:tabPaddingTop="-1dp"
+        app:tabSelectedTextColor="@color/blackColor"
+
+        app:tabTextAppearance="@style/MyCustomTabText"
+        app:tabTextColor="@color/skyBlueColor" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        Of="@id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+
+</LinearLayout>

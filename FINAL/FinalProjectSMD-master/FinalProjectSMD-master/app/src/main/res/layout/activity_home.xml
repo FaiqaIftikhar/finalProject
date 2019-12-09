@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".home">
+
+
+    <LinearLayout
+        android:id="@+id/nestedview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:background="@color/whiteColor"
+            android:layout_height="1000dp"
+            android:fitsSystemWindows="true"
+            tools:context="com.example.BazaarApp.home"
+            tools:openDrawer="start">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/whiteColor"
+                    android:elevation="0dp"
+                    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="0dp"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteX="16dp">
+
+                        <ImageView
+
+                            android:layout_width="56dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:padding="9dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon" />
+
+
+                        <SearchView
+                            android:id="@+id/searchBar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/button_round"
+                            android:iconifiedByDefault="false"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:outlineSpotShadowColor="@color/whiteColor"
+                            android:outlineAmbientShadowColor="@color/whiteColor"
+                            android:queryHint="Search" />
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/typeList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+
+                <ViewFlipper
+                    android:id="@+id/flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="Top Picks For You"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#050505"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/flipper">
+
+                </TextView>
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pickList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.199"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/verticalList"
+                    android:layout_marginTop="0dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.199"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+                <Button
+                    android:id="@+id/btnNext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="next" />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:headerLayout="@layout/nav_header"
+                app:menu="@menu/drawer_menu" />
+
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

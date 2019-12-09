@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/whiteColor"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="3dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:fontFamily="@font/nunito_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/blackColor"
+                android:textSize="20dp"
+                android:id="@+id/reviewName"/>
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/view3"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/skyBlueColor"
+                 />
+
+            <RatingBar
+                android:id="@+id/reviewRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="@color/averageColor"
+                android:rating="5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:secondaryProgressTint="@android:color/transparent"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

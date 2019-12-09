@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reviewActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarCategory"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blackColor"
+            android:elevation="0dp"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/categoryHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:text="Add your Review"
+            android:textColor="@color/whiteColor"
+            android:textSize="29dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="fill"
+            android:background="@color/blackColor"
+            android:onClick="backAcivity"
+            android:scaleType="fitXY"
+            android:src="@drawable/backarrow" />
+
+    </FrameLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:numStars="5"
+        android:rating="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/ratingbtn"
+        android:layout_width="221dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/sign_btn"
+        android:text="Submit"
+        android:textColor="@color/whiteColor"
+        android:fontFamily="@font/nunito_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

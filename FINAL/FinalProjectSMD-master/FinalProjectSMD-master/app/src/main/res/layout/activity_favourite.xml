@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".favourite">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarCategory"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blackColor"
+            android:elevation="0dp"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Favourite"
+            android:textColor="@color/whiteColor"
+            android:textSize="29dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            android:background="@color/blackColor"
+            android:onClick="backAcivity"
+            android:src="@drawable/backarrow" />
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="666dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:onClick="gottoinfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.053">
+
+            <TextView
+                android:id="@+id/item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Deal 1"
+                android:textColor="@color/blackColor"
+                android:textSize="22sp"/>
+
+            <ImageView
+                android:layout_width="178dp"
+                android:layout_height="63dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/hardees"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/item1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            android:onClick="gottoinfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview1"
+            app:layout_constraintVertical_bias="0.043">
+
+            <TextView
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Deal 2"
+                android:textColor="@color/blackColor"
+                android:textSize="22sp"/>
+
+            <ImageView
+                android:layout_width="178dp"
+                android:layout_height="63dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/deal2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/item2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

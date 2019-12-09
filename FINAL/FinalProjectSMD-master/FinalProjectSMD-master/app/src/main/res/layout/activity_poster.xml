@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".poster">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarCategory"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blackColor"
+            android:elevation="0dp"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Post your Add"
+            android:textColor="@color/whiteColor"
+            android:textSize="29dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="fill"
+            android:scaleType="fitXY"
+            android:background="@color/blackColor"
+            android:onClick="backAcivity"
+            android:src="@drawable/backarrow" />
+
+    </FrameLayout>
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="634dp"
+        android:id="@+id/linear1">
+
+        <ImageView
+            android:id="@+id/DealPoster"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="68dp"
+            android:src="@drawable/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/brand"
+            android:layout_width="204dp"
+            android:layout_height="44dp"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_marginLeft="145dp"
+            android:layout_marginRight="155dp"
+            android:hint="Brand Name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DealPoster"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <EditText
+            android:id="@+id/picName"
+            android:layout_width="204dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Add Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brand" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="204dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Add Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picName" />
+
+
+        <Button
+            android:id="@+id/uploadAddPic"
+            android:layout_width="213dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sign_btn"
+
+            android:fontFamily="@font/nunito_bold"
+
+            android:text="Upload Picture"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <Button
+            android:id="@+id/submitAdd"
+            android:layout_width="213dp"
+            android:layout_height="47dp"
+            android:background="@drawable/sign_btn"
+            android:fontFamily="@font/nunito_bold"
+            android:text="POST ADD"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uploadAddPic"
+            app:layout_constraintVertical_bias="0.263" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>

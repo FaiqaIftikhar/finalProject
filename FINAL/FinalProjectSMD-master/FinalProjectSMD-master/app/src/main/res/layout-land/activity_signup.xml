@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activitySignup">
+
+
+<ImageView
+    android:id="@+id/imageView1"
+    android:layout_width="171dp"
+    android:layout_height="95dp"
+    android:layout_marginTop="48dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.087"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/icon" />
+
+<EditText
+    android:id="@+id/editTextfname"
+    android:layout_width="204dp"
+    android:fontFamily="@font/nunito_bold"
+    android:layout_height="44dp"
+    android:layout_marginTop="48dp"
+    android:ems="10"
+    android:hint="@string/first_name"
+    android:inputType="textPersonName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.474"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/editTextlname"
+    android:layout_width="204dp"
+    android:layout_height="44dp"
+    android:layout_marginStart="36dp"
+    android:layout_marginTop="48dp"
+    android:fontFamily="@font/nunito_bold"
+    android:ems="10"
+    android:hint="@string/last_name"
+    android:inputType="textPersonName"
+    app:layout_constraintStart_toEndOf="@+id/editTextfname"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/editTextemail"
+    android:layout_width="204dp"
+    android:layout_height="44dp"
+    android:layout_marginTop="16dp"
+    android:ems="10"
+    android:hint="@string/e_mail"
+    android:fontFamily="@font/nunito_bold"
+    android:inputType="textPersonName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.474"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextlname" />
+
+<EditText
+    android:id="@+id/editTextpassword"
+    android:layout_width="204dp"
+    android:layout_height="44dp"
+    android:layout_marginTop="12dp"
+    android:ems="10"
+    android:hint="@string/password"
+    android:inputType="textPassword"
+    android:fontFamily="@font/nunito_bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.474"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextemail" />
+
+<EditText
+    android:id="@+id/editText_reenterpassword"
+    android:layout_width="204dp"
+    android:layout_height="44dp"
+    android:layout_marginTop="16dp"
+    android:ems="10"
+    android:hint="@string/re_enter_password"
+    android:inputType="textPassword"
+    android:fontFamily="@font/nunito_bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.474"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextpassword" />
+
+<RadioGroup
+    android:id="@+id/rg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="0dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editText_reenterpassword">
+
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:text="@string/female"
+        android:fontFamily="@font/nunito_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="513dp" />
+
+    <RadioButton
+        android:id="@+id/rd2"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:text="@string/male" />
+
+
+</RadioGroup>
+
+<Button
+    android:id="@+id/buttonSignup1"
+    android:layout_width="204dp"
+    android:layout_height="44dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/sign_btn"
+    android:text="SignUp"
+    android:textColor="#fff"
+    android:fontFamily="@font/nunito_bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.499"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/rg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
